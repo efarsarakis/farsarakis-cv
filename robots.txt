@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://farsarakis.com/sitemap.xml
+Sitemap: https://www.farsarakis.com/sitemap.xml
