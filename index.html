@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Emmanouil (Manos) Farsarakis</title>
+<meta name="description" content="Emmanouil Ioannis Farsarakis — Systems Architect & AI Researcher at Intel. Memory-centric AI inference, distributed systems, and high-performance computing.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Emmanouil (Manos) Farsarakis">
+<meta property="og:description" content="Systems Architect & AI Researcher at Intel — memory-centric AI inference, distributed systems and HPC.">
+<meta property="og:url" content="https://farsarakis.com">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>ƒ</text></svg>">
+<style>
+  :root{
+    --bg:#fbfaf7; --fg:#1a1a1a; --muted:#5c5c57; --rule:#e3e0d8;
+    --accent:#7a1f1f; --link:#7a1f1f; --card:#ffffff;
+    --maxw:720px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#14140f; --fg:#e9e6dd; --muted:#a3a097; --rule:#2c2c25;
+           --accent:#d98a8a; --link:#e0a3a3; --card:#1b1b15; }
+  }
+  html[data-theme="light"]{ --bg:#fbfaf7; --fg:#1a1a1a; --muted:#5c5c57; --rule:#e3e0d8; --accent:#7a1f1f; --link:#7a1f1f; --card:#ffffff; }
+  html[data-theme="dark"]{ --bg:#14140f; --fg:#e9e6dd; --muted:#a3a097; --rule:#2c2c25; --accent:#d98a8a; --link:#e0a3a3; --card:#1b1b15; }
+
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--fg);
+    font-family:"Charter","Iowan Old Style","Palatino Linotype",Georgia,"Times New Roman",serif;
+    font-size:18px; line-height:1.6; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:64px 24px 96px}
+  a{color:var(--link); text-decoration:none; border-bottom:1px solid color-mix(in srgb,var(--link) 35%,transparent)}
+  a:hover{border-bottom-color:var(--link)}
+  h1{font-size:2.1rem; line-height:1.15; margin:0 0 .15em; letter-spacing:-.01em}
+  h2{font-size:.82rem; text-transform:uppercase; letter-spacing:.14em; color:var(--muted);
+     font-weight:600; font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+     margin:3em 0 1em; padding-bottom:.5em; border-bottom:1px solid var(--rule)}
+  .role{color:var(--muted); font-size:1.06rem; margin:.1em 0 .2em}
+  .loc{color:var(--muted); font-size:.95rem}
+  .links{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif; font-size:.92rem;
+         margin:1.1em 0 0; display:flex; flex-wrap:wrap; gap:.1em .9em}
+  .links a{border:0; color:var(--muted)}
+  .links a:hover{color:var(--link)}
+  /* contact links: no decorative arrows */
+  p.lead{margin:1.4em 0 0}
+  .pub{margin:0 0 1.15em; padding:0}
+  .pub .t{font-weight:600}
+  .pub .v{color:var(--muted); font-size:.95rem; display:block; font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+  .yr{color:var(--muted); font-variant-numeric:tabular-nums; font-family:system-ui,sans-serif; font-size:.85rem}
+  .tag{display:inline-block; font-family:system-ui,sans-serif; font-size:.68rem; letter-spacing:.06em;
+       text-transform:uppercase; color:var(--accent); border:1px solid color-mix(in srgb,var(--accent) 40%,transparent);
+       border-radius:3px; padding:.05em .45em; margin-left:.5em; vertical-align:.12em}
+  .item{margin:0 0 1.3em}
+  .item .h{display:flex; justify-content:space-between; gap:1em; align-items:baseline; flex-wrap:wrap}
+  .item .org{font-weight:600}
+  .item .when{color:var(--muted); font-size:.85rem; font-family:system-ui,sans-serif; white-space:nowrap; font-variant-numeric:tabular-nums}
+  .item .sub{color:var(--muted); font-size:.98rem}
+  .item p{margin:.3em 0 0; font-size:.98rem}
+  .metrics{font-family:system-ui,sans-serif; font-size:.9rem; color:var(--muted); margin:.2em 0 1.4em}
+  .metrics b{color:var(--fg); font-weight:600}
+  nav.toc{position:sticky; top:0; background:color-mix(in srgb,var(--bg) 88%,transparent);
+          backdrop-filter:blur(6px); margin:0 -24px; padding:10px 24px; border-bottom:1px solid var(--rule);
+          font-family:system-ui,sans-serif; font-size:.82rem; display:flex; gap:1.2em; flex-wrap:wrap; z-index:10}
+  nav.toc a{border:0; color:var(--muted)}
+  nav.toc a:hover{color:var(--link)}
+  .toggle{margin-left:auto; cursor:pointer; background:none; border:0; color:var(--muted); font:inherit; padding:0}
+  footer{margin-top:4em; padding-top:1.5em; border-top:1px solid var(--rule);
+         color:var(--muted); font-size:.85rem; font-family:system-ui,sans-serif}
+  html{scroll-behavior:smooth}
+  @media (max-width:480px){ body{font-size:17px} h1{font-size:1.8rem} nav.toc{gap:.9em} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <nav class="toc">
+    <a href="#publications">Publications</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <button class="toggle" id="themeToggle" aria-label="Toggle colour theme">◐ theme</button>
+  </nav>
+
+  <header>
+    <h1>Emmanouil&nbsp;Ioannis&nbsp;Farsarakis</h1>
+    <div class="role">Systems Architect &amp; AI Researcher — Intel</div>
+    <div class="loc">Edinburgh, United Kingdom · eligible to work in the US, UK &amp; EU</div>
+    <div class="links">
+      <a class="noarrow" href="mailto:farsarakis@gmail.com">email</a>
+      <a href="https://scholar.google.com/citations?user=w6qTiBQAAAAJ">Google&nbsp;Scholar</a>
+      <a href="https://www.linkedin.com/in/farsarakis">LinkedIn</a>
+      <a href="resume-2page.pdf">CV&nbsp;(PDF)</a>
+    </div>
+    <p class="lead">I am a systems architect and AI researcher in Intel's Systems Architecture and Engineering
+    team, working on inference-oriented, memory-centric system architectures — disaggregated and in-network
+    memory, KV-cache placement across heterogeneous memory, and the serving of vision-language-action (VLA)
+    models for robotics on dataflow and heterogeneous accelerators. My background is in physics and
+    high-performance computing, and I have spent more than a decade at the intersection of computer systems,
+    AI infrastructure and performance, across both industry and academia. The throughline: the FLOP/s-versus-TB/s balancing act, applied recursively at every layer of the memory hierarchy.</p>
+  </header>
+
+  <section id="publications">
+    <h2>Publications &amp; Patents</h2>
+    <div class="metrics"><a href="https://scholar.google.com/citations?user=w6qTiBQAAAAJ">Full publication list on Google Scholar</a></div>
+
+    <div class="pub">
+      <span class="yr">2024</span>
+      <span class="t"><a href="https://journal.mostwiedzy.pl/TASKQuarterly/article/view/3535">Optimizing Graph Learning using Hierarchical Graph Adjacency Matrix (HGAM)</a></span>
+      <span class="tag">Journal</span>
+      <span class="v">R. Benke, <b>E.&nbsp;I. Farsarakis</b>, M. Szarmach, A. Zanetti, H.-H. S. Lee — TASK Quarterly 28(3)</span>
+    </div>
+
+    <div class="pub">
+      <span class="yr">2023</span>
+      <span class="t"><a href="https://patents.google.com/patent/US20230385641A1/en">Neural Network training and inference with Hierarchical Adjacency Matrix</a></span>
+      <span class="tag">Patent</span>
+      <span class="v">US Patent Application 18/325,348</span>
+    </div>
+
+    <div class="pub">
+      <span class="yr">2023</span>
+      <span class="t"><a href="https://ieeexplore.ieee.org/abstract/document/10158124">Characterizing the Scalability of Graph Convolutional Networks on Intel® PIUMA</a></span>
+      <span class="v">M. Adiletta, J. J. Tithi, <b>E.&nbsp;I. Farsarakis</b>, G. Gerogiannis, R. Adolf, R. Benke, et al. — IEEE ISPASS 2023</span>
+    </div>
+
+    <div class="pub">
+      <span class="yr">2020</span>
+      <span class="t"><a href="https://aclanthology.org/2020.ngt-1.26/">Edinburgh's submissions to the 2020 machine translation efficiency task</a></span>
+      <span class="v">N. Bogoychev, R. Grundkiewicz, A. F. Aji, M. Behnke, K. Heafield, S. Kashyap, <b>E.&nbsp;I. Farsarakis</b>, M. Chudyk — WNGT 2020 (pp. 218–224)</span>
+    </div>
+
+    <div class="pub">
+      <span class="yr">2018</span>
+      <span class="t"><a href="https://www.ixpug.org/components/com_solutionlibrary/assets/documents/1531251482-decompositiongs2talk.pdf">Optimized Data Decomposition for Reduced Communication Costs</a></span>
+      <span class="v">ISC'18, IXPUG</span>
+    </div>
+
+    <div class="pub">
+      <span class="yr">2017</span>
+      <span class="t"><a href="http://www.pdsw.org/pdsw-discs17/wips/farsarakis-wip-pdsw-discs17.pdf">Resource requirement specification for novel data-aware and workflow-enabled HPC job schedulers</a></span>
+      <span class="v"><b>E. Farsarakis</b>, I. Panourgias, A. Jackson, J. Herrera, M. Weiland, M. Parsons — SC'17, PDSW-DISCS</span>
+    </div>
+
+    <div class="pub">
+      <span class="yr">2016</span>
+      <span class="t"><a href="http://www.nextgenio.eu/sites/default/files/documents/publications/EASC2016%20IO%20talk.pdf">Monitoring and evaluating I/O performance of HPC systems</a></span>
+      <span class="v"><b>M. Farsarakis</b>, M. Weiland, W. Jackson, M. Parsons — 4th Intl. Exascale Applications and Software Conf. (EASC)</span>
+    </div>
+
+    <div class="pub">
+      <span class="yr">2015</span>
+      <span class="t">Experiences Porting Production Codes to Xeon Phi Processors</span>
+      <span class="v"><b>E. Farsarakis</b>, A. Jackson, F. Reid, D. Scott, M. Weiland — Parallel Computing: On the Road to Exascale (pp. 575–583)</span>
+    </div>
+
+    <div class="pub">
+      <span class="yr">2014</span>
+      <span class="t">Energy Efficiency: Benefits and limitations of modern HPC architectures</span>
+      <span class="v"><b>E. I. Farsarakis</b> — MSc dissertation, EPCC, The University of Edinburgh</span>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+
+    <div class="item">
+      <div class="h"><span class="org">Intel</span><span class="when">Nov 2023 – Present</span></div>
+      <div class="sub">AI Systems &amp; Solutions Engineer · Systems Architecture &amp; Engineering — Edinburgh (remote)</div>
+      <p>Technical lead for SPEC Cloud benchmark simulation and system-level performance projection, leading a team of five. Drive
+      next-generation, inference-focused architecture research for large-memory-capacity serving — silicon
+      photonics and rack-scale optical interconnects, dataflow vs. heterogeneous accelerators, disaggregated
+      and in-network memory, and VLA-model serving for robotics.</p>
+    </div>
+
+    <div class="item">
+      <div class="h"><span class="org">Intel</span><span class="when">Feb 2022 – Nov 2023</span></div>
+      <div class="sub">Artificial Intelligence Researcher — Edinburgh (remote)</div>
+      <p>Coordinated research with leading scientists on next-generation AI algorithms — GNNs, NLP and
+      recommendation systems — for graph analytics and security.</p>
+    </div>
+
+    <div class="item">
+      <div class="h"><span class="org">Intel</span><span class="when">Feb 2019 – Feb 2022</span></div>
+      <div class="sub">Platform Architect — Edinburgh (hybrid)</div>
+      <p>Drove novel AI optimizations (SIMT, sparse-compute acceleration, quantization) and led AI workload
+      characterization for the Intel PiUMA sparse accelerator. Based at the University of Edinburgh,
+      collaborating with K. Heafield and P. Boyle.</p>
+    </div>
+
+    <div class="item">
+      <div class="h"><span class="org">The University of Edinburgh — EPCC</span><span class="when">2014 – 2019</span></div>
+      <div class="sub">Applications Consultant / Developer</div>
+      <p>HPC and data-science leadership across finance, cyber security and exascale; porting, profiling and
+      optimisation on academia–industry collaborations.</p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Selected Projects</h2>
+
+    <div class="item">
+      <div class="org">Inference Architectures for VLA Robotics</div>
+      <p>Characterized vision-language-action robotics models (π0.5, GR00T) as a two-frequency serving
+      workload and mapped them onto candidate architectures, comparing dataflow accelerators (Groq) against
+      heterogeneous GPUs — a common FLOP/s-versus-TB/s balancing act across the memory hierarchy.</p>
+    </div>
+
+    <div class="item">
+      <div class="org">Silicon Photonics &amp; Disaggregated Memory</div>
+      <p>Assessed silicon-photonics and rack-scale optical interconnect technologies (e.g. Celestial AI) for
+      memory-centric inference, comparing latency, throughput and cost across on- vs off-chip solutions;
+      explored disaggregated compute/memory and in-network memory.</p>
+    </div>
+
+    <div class="item">
+      <div class="org">Sparse Computational Infrastructure for GNNs <span class="tag">Harvard × Intel</span></div>
+      <p>Established and led a cross-organisation collaboration — around seven contributors across Intel,
+      Intel Labs and Harvard University (SEAS) — on graph-learning acceleration for Intel PiUMA. Owned
+      inception, stakeholder management, software development and performance optimization — resulting in
+      ISPASS 2023, a TASK Quarterly journal paper (2024) and a US patent.</p>
+    </div>
+
+    <div class="item">
+      <div class="org">NextGenIO — Exascale Non-Volatile Memory</div>
+      <p>Built system-level workload characterization of ARCHER (UK national supercomputer) and researched
+      data-aware, workflow-enabled HPC scheduling (SLURM-class) for Intel 3D&nbsp;XPoint non-volatile memory.</p>
+    </div>
+
+    <div class="item">
+      <div class="org">ISC'14 Student Cluster Competition — Highest Linpack</div>
+      <p>Designed and optimized the software stack of a custom GPU cluster — Highest Linpack at ISC'14
+      (3.38&nbsp;Tflops/kW, est. 4th on the June 2014 Green500). Ported GADGET-3 kernels to GPU via OpenACC for 2× speedup.</p>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="item">
+      <div class="h"><span class="org">MSc in High Performance Computing</span><span class="when">2014</span></div>
+      <div class="sub">The University of Edinburgh — Distinction; Class Representative</div>
+    </div>
+    <div class="item">
+      <div class="h"><span class="org">BSc Physics (Computational Science specialization)</span><span class="when">2011</span></div>
+      <div class="sub">University of Crete — Top 5% of class</div>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="yr"></span> Emmanouil Ioannis Farsarakis ·
+    <a href="https://scholar.google.com/citations?user=w6qTiBQAAAAJ">Scholar</a> ·
+    <a href="https://www.linkedin.com/in/farsarakis">LinkedIn</a> ·
+    <a href="resume-2page.pdf">CV</a>
+  </footer>
+
+</div>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  (function(){
+    var root = document.documentElement, key = 'cv-theme';
+    var saved = null; try { saved = localStorage.getItem(key); } catch(e){}
+    if (saved) root.setAttribute('data-theme', saved);
+    document.getElementById('themeToggle').addEventListener('click', function(){
+      var cur = root.getAttribute('data-theme');
+      if (!cur) cur = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      var next = cur === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem(key, next); } catch(e){}
+    });
+  })();
+</script>
+</body>
+</html>
